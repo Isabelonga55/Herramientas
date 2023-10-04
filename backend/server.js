@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors')
 const connect = require('./src/cofig/db')
 const producto = require('./src/routes/productos')
+const auth = require('./src/routes/auth')
 
 const server = express();
 
@@ -18,6 +19,7 @@ server.get("/", (request, response) => {
     response.send("API V1.0")
 })
 
+auth(server)
 producto(server)
 
 
