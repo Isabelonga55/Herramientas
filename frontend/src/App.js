@@ -1,18 +1,23 @@
-import { useEffect } from 'react';
+
 import './App.css';
-import Usuarios from './components/usuario/Usuario';
+import { Routes, Route, Link } from 'react-router-dom'
+import SignUp from './components/usuario/SignUp';
+import Presentacion from './components/presentacion/Presentacion';
+import Login from './components/usuario/Login';
+import Navegacion from './components/Navegacion/Navegacion';
+import Productos from './components/Productos/Productos';
 
 function App() {
 
-  useEffect(() => {
-    fetch("http://localhost:3001/productos/getProdList")
-      .then(req => req.json()).then(response => console.log(response))
-
-  }, [])
-
   return (
     <div className="App">
-      <Usuarios />
+      <Navegacion />
+      <Routes>
+        <Route path='/' element={<Presentacion />} />
+        <Route path='/SignUp' element={<SignUp />} />
+        <Route path='/Productos' element={<Productos />} />
+        <Route path='/LogIn' element={<Login />} />
+      </Routes>
     </div>
   );
 }
