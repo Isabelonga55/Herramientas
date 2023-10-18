@@ -27,9 +27,8 @@ const closeMobileMenu = () => setClick(false);
     <>
     <nav className='navbar'>
     <div className='navbar-container'>
-          <Link onClick={closeMobileMenu} className='navbar-logo'> MiTiendita
-          <Icon.FaOldRepublic/>
-          {/* <img src={logo} alt="imagen" className='navbar-logo'/> */}
+          <Link onClick={closeMobileMenu} className='navbar-logo'> Isaroro
+         <img src="logo.png" alt="" className='navbar-logo'/> 
           </Link>     
 
     
