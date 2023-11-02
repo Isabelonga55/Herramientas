@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import * as Icon from 'react-icons/fa6'
+import { CartContext } from "../../providers/CartContext"
+import imagens from '../../img/agenda-permanente-de-discos-caderno-de-disco.webp'
+import "./Productos.css"
 function Productos() {
     const [productos, setProductos] = useState([]);
+    const { addProductToCart } = useContext( CartContext )
 
     useEffect(() => {
         fetch('http://localhost:3001/productos/getProdList')
@@ -11,11 +15,11 @@ function Productos() {
     }, [])
 
     return (
-        <>
+        <div className='products'>
             {productos.map(producto => {
                 return (
                     <Card key={producto.id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card.Img variant="top" src={imagens} />
                         <Card.Body>
                             <Card.Title>{producto.nombre}</Card.Title>
                             <Card.Text>
@@ -25,13 +29,13 @@ function Productos() {
                                 {producto.precio}
                             </Card.Text>
                             <Button variant="primary">Ver Mas...</Button>
-                            <Button variant="primary"><Icon.FaCartPlus /></Button>
+                            <Button variant='success' onClick={ () => addProductToCart(producto) } >Agregar</Button>
                         </Card.Body>
                     </Card>
                 )
             })}
 
-        </>
+        </div>
     )
 }
 
