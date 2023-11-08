@@ -18,7 +18,7 @@ function SignUp() {
   const onSave = async(event) =>{
     event.preventDefault();
     console.log(formData);
-    await fetch('http://localhost:3001/api/signUp', {
+    await fetch('https://proyectoecommerance.onrender.com/api/signUp', {
         method: "POST",
         headers:{
             "Content-Type": "application/json"

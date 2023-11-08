@@ -10,7 +10,7 @@ function Productos() {
     const { addProductToCart } = useContext( CartContext )
 
     useEffect(() => {
-        fetch('http://localhost:3001/productos/getProdList')
+        fetch('https://proyectoecommerance.onrender.com/productos/getProdList')
             .then(req => req.json()).then(result => setProductos(result.data))
     }, [])
 
