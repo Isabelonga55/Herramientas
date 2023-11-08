@@ -8,6 +8,7 @@ import Productos from './components/Productos/Productos';
 import { TokenProvider } from "./providers/TokenContext";
 import { CartProvider } from "./providers/CartContext";
 import Cart from "./components/cart/cart";
+import Footer from "./components/Footer/Footer"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 function App() {
@@ -23,8 +24,10 @@ function App() {
               <Route path='/Productos' element={<Productos />} />
               <Route path='/LogIn' element={<Login />} />
               <Route path='/cart/list' element={<Cart />} />
+      
             </Routes>
           </div>
+          <Footer/>
         </PayPalScriptProvider>
       </CartProvider>
     </TokenProvider>
