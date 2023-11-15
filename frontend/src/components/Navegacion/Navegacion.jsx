@@ -42,8 +42,8 @@ const { cart } = useContext( CartContext )
           <li className='nav-item'><Link className='nav-links' to="/Productos"  onClick={closeMobileMenu}>Productos</Link></li>
           <li className='nav-item'><Link className='nav-links' to="/LogIn" onClick={closeMobileMenu}>LogIn</Link></li>
           <li className='nav-item'><Link className='nav-links' to="/SignUp" onClick={closeMobileMenu}>SingUp</Link></li>
-          <Nav.Link href="/cart/list"><Badge><FaShoppingCart /> {cart.total}</Badge></Nav.Link>
         </ul>
+        <Link to="/cart/list"><Badge><FaShoppingCart /> {cart.total}</Badge></Link>
      </div>
     </nav>
        

@@ -40,7 +40,7 @@ function CartProvider({children}) {
         frutas[1] = "Kiwi"
 
         // aumentar el total a pagar
-        cart.amount += product.price
+        cart.amount += product.precio
 
         // actualizar el estado del carrito, el hook useEffect se encarga de actualizar el localStorage
         setCart( {...cart} )
@@ -57,7 +57,7 @@ function CartProvider({children}) {
         if( itemPosition != -1 ) {
             cart.items.splice(itemPosition, 1)
             cart.total -= 1
-            cart.amount -= product.price
+            cart.amount -= product.precio
 
 
             // actualizar el estado del carrito, el hook useEffect se encarga de actualizar el localStorage
@@ -76,7 +76,7 @@ function CartProvider({children}) {
                 deleteProductFromCart(product)
             } else {
                 cart.items[itemPosition].quantity -= 1
-                cart.amount -= product.price
+                cart.amount -= product.precio
     
                 // actualizar el estado del carrito, el hook useEffect se encarga de actualizar el localStorage
                 setCart( {...cart} )
