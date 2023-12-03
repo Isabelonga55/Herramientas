@@ -1,9 +1,8 @@
-import React, {useState,useContext} from 'react'
+import React, {useState,us} from 'react'
 import { Link } from 'react-router-dom'
 import './Navegacion.css'
 import * as Icon from 'react-icons/fa'
-import { Badge,Nav } from 'react-bootstrap'
-import { FaShoppingCart } from 'react-icons/fa'
+
 function Navegacion() {
 const [click, setClick] = useState(false);
 //const [button, setButton] = useState(true);
@@ -37,6 +36,9 @@ const closeMobileMenu = () => setClick(false);
     </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'><Link className='nav-links' to="/"  onClick={closeMobileMenu}>Home</Link></li>
+          <li className='nav-item'><Link className='nav-links' to="/IA" onClick={closeMobileMenu}>IA</Link></li>
+          <li className='nav-item'><Link className='nav-links' to="/School" onClick={closeMobileMenu}>School</Link></li>
+          <li className='nav-item'><Link className='nav-links' to="/Extenciones" onClick={closeMobileMenu}>Extenciones Visual Studio</Link></li>
         </ul>
      </div>
     </nav>

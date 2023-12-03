@@ -1,0 +1,43 @@
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddada;
+  }
+header{
+  width: auto;
+  height: 80px;
+  background-color:lightgray;
+   display: flex;
+   justify-content: space-between;
+ }
+.botones li a{
+  color:red;
+  text-decoration: none;
+  font-family: 'K2D';
+  font-weight: 800;
+  font-size: 20px;
+}
+.buttons{
+  font-weight: 800;
+  font-size: 20px;}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+.hello{
+  color:black;
+}
+.tabla_ia{
+  color:#1A120B;
+}
+
